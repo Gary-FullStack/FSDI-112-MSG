@@ -13,6 +13,8 @@
             <h6 class="card-subtitle mb-2 text-muted">{{post.subtitle}}</h6>
             <p class="card-text">{{post.body | truncatechars:200 }}</p>
             <a href="{% url 'detail' post.id %}" class="card-link">Read more...</a>
+            <a href="{% url 'edit' post.id %}" class="card-link">Edit post</a>
+            <a href="{% url 'delete' post.id %}" class="card-link">Delete</a>
             </div>
         </div>
     {% endfor %}
